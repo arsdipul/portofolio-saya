@@ -480,3 +480,59 @@ html, body, a, button, input, [role="button"] {
 .contact-card:hover img {
     transform: scale(1.2) rotate(10deg); /* Logo nge-zoom dan miring dikit */
 }
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000; /* Warna hitam biar senada sama kursor neon kamu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #333;
+    border-top: 5px solid #00f7ff; /* Warna biru neon seperti kursor kamu */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+#loader p {
+    color: white;
+    margin-top: 15px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Kodingan khusus buat layar HP (Responsive) */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Jadi 1 kolom biar gambar gede & jelas */
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Ukuran tulisan judul dikecilkan dikit biar gak penuh */
+    }
+
+    .skill-card {
+        width: 90%; /* Biar kotak skill gak mepet ke pinggir layar HP */
+        margin: 10px auto;
+    }
+}

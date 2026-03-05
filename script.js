@@ -61,3 +61,10 @@ hoverItems.forEach(item => {
         outline.classList.remove('cursor-hover');
     });
 });
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+        loader.classList.add('fade-out');
+    }, 1000); // Angka 1000 = loading muncul selama 1 detik
+});

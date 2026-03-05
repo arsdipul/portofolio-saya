@@ -570,3 +570,42 @@ h1 {
         height: auto;
     }
 }
+
+/* --- KODINGAN BIAR GAK PERLU DESKTOP MODE --- */
+@media (max-width: 768px) {
+    /* 1. Paksa Judul Mengecil */
+    h1 {
+        font-size: 2rem !important;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* 2. Beresin Ikon Ae, Ai, St yang Numpuk */
+    .software-icons { 
+        position: relative !important; /* Biar gak melayang nabrak teks */
+        top: 0 !important;
+        left: 0 !important;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    /* 3. Kecilin Ukuran Ikonnya */
+    .software-icons img {
+        width: 45px !important;
+        height: auto;
+    }
+
+    /* 4. Pastikan Gambar Portofolio Jadi 1 Kolom */
+    .gallery {
+        grid-template-columns: 1fr !important;
+        padding: 10px;
+    }
+
+    /* 5. Biar Gak Bisa Digeser Kanan-Kiri (Goyang) */
+    body {
+        overflow-x: hidden;
+    }
+}

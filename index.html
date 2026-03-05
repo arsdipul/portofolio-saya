@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<div>
+  <div class="cursor-outline"></div>
+<div class="cursor-dot"></div>
+</div>
+<body>
+
+   <nav class="navbar-container">
+  <div class="navbar-wrapper">
+    <div class="nav-logo">
+      <span class="logo-text">Ipul</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#skill">My Skill</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-icon">
+      <button class="icon-btn" id="theme-toggle" title="Ganti Tema">
+  <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  
+  <svg id="moon-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Menghilangkan margin bawaan browser agar tidak ada celah putih */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 1. CONTAINER: Harus transparan total agar tidak ada kotak putih saat scroll */
+  .navbar-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+    padding: 0 20px;
+    background: transparent !important; /* Memaksa transparan */
+    pointer-events: none; /* Klik bisa tembus ke belakang kecuali pada wrapper */
+  }
+
+  /* 2. WRAPPER: Kapsul utamanya */
+  .navbar-wrapper {
+    background: rgba(255, 255, 255, 0.4); /* Putih transparan */
+    backdrop-filter: blur(15px); /* Efek blur kaca */
+    -webkit-backdrop-filter: blur(15px);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    pointer-events: auto; /* Mengaktifkan klik kembali di area navbar */
+  }
+
+  /* Warna Teks Hitam */
+  .logo-text {
+    color: #000000;
+    font-weight: 800;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+
+  .nav-links li a:hover {
+    opacity: 1;
+  }
+
+  .icon-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    color: #000;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* Menghilangkan menu di HP agar tidak berantakan */
+  @media (max-width: 800px) {
+    .nav-links { display: none; }
+  }
+</style>
+
+    <section id="home" class="hero-section">
+  <div class="hero-overlay"></div>
+  <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background" class="hero-bg">
+  
+  <div class="hero-content">
+  <span class="reveal">MUHAMMAD SAIFULLAH ARSYAD</span>
+  <h1 class="reveal">Portofolio</h1>
+  <p class="reveal">Seorang Desainer & Developer yang fokus pada estetika...</p>
+  <div class="reveal">
+    <a href="https://Instagram.com/arsdipul_" class="btn-work">Work with Me</a>
+  </div>
+</div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Memenuhi layar agar estetik */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000; /* Warna dasar jika gambar telat loading */
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  /* KUNCI UTAMA: Overlay gelap transparan */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Hitam transparan 60% */
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3; /* Di atas overlay dan gambar */
+    text-align: center;
+    color: #ffffff; /* Warna teks putih murni */
+    max-width: 700px;
+    padding: 0 20px;
+  }
+
+  .name-tag {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 10vw, 5rem); /* Ukuran adaptif sesuai layar */
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9); /* Putih sedikit transparan agar tidak terlalu tajam */
+  }
+
+  .btn-work {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-work:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* Responsive sederhana untuk HP */
+  @media (max-width: 600px) {
+    .hero-desc { font-size: 0.9rem; }
+  }
+</style>
+
+    <section id="about-me" class="about-me-section">
+  <div class="container">
+    <div class="about-content">
+      
+      <div class="about-photo-wrapper">
+        <div class="about-photo-container">
+          <img src="foto_ganteng.jpeg" alt="Muhammad Saifullah Arsyad" class="about-photo">
+          <div class="photo-accent"></div> </div>
+      </div>
+      
+      <div class="about-text">
+        <h2 class="section-title">About Me</h2>
+        <p class="subtitle">MUHAMMAD SAIFULLAH ARSYAD</p>
+        <h1 class="main-heading">Portofolio</h1>
+        <p class="description">
+        </p>
+        
+        <p class="intro-text">
+          Halo! Saya <span class="highlight">Muhammad Saifullah Arsyad</span>. 
+          Saya adalah seorang pelajar yang sangat antusias dengan dunia teknologi dan desain. 
+          Saya memiliki keahlian dalam Graphic Designer. 
+          Mari bekerja sama untuk membuat sesuatu yang luar biasa!
+        </p>
+
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* --- Style Reset --- */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  /* --- Styling Utama Seksi About Me --- */
+  .about-me-section {
+    background-color: #f9f9f9; /* Latar belakang terang agar bersih */
+    padding: 80px 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* --- KUNCI: Flexbox Layout 2 Kolom --- */
+  .about-content {
+    display: flex;
+    align-items: center; /* Foto & Teks rata tengah vertikal */
+    gap: 60px; /* Jarak antara foto dan teks */
+  }
+  
+  /* --- KOLOM FOTO (Ukuran Terkendali) --- */
+  .about-photo-wrapper {
+    flex: 1; /* Ambil space tapi jangan berlebihan */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-photo-container {
+    position: relative; /* Untuk garis aksen */
+    max-width: 320px; /* Batas maksimum lebar foto profil (lebih kecil) */
+    width: 100%;
+  }
+  
+  .about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar foto tidak gepeng */
+    border-radius: 8px; /* Sudut tumpul */
+    display: block;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Bayangan halus */
+    z-index: 2;
+  }
+
+  /* Garis Aksen Pinggir (Seperti contoh ke-2) */
+  .photo-accent {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* --- KOLOM TEKS --- */
+  .about-text {
+    flex: 2; /* Kolom teks lebih lebar dari foto */
+  }
+  
+  .section-title {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .main-heading {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 5px 0 15px;
+    color: #000;
+  }
+  
+  .description, .intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+  
+  .intro-text { font-size: 1rem; color: #777; margin-bottom: 30px; }
+  .highlight { font-weight: 700; color: #000; }
+  
+  .btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .btn-primary:hover { background-color: #333; }
+  
+  /* --- RESPONSIVE UNTUK TAMPILAN HP --- */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column; /* Ubah jadi 1 kolom (atas-bawah) di HP */
+      text-align: center;
+      gap: 30px;
+    }
+    
+    .main-heading { font-size: 2.5rem; }
+  }
+</style>
+
+    <section id="skill" class="bg-light">
+    <h2 class="section-title">My Skills</h2>
+   <div class="skill-container">
+    <div class="skill-card">
+        <img src="https://www.bing.com/th/id/OIP.TO7YRIW3gvyk5whhRMN--gHaHa?w=188&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.2&pid=3.1&rm=2">
+        <span>Affinity Designer</span>
+    </div>
+
+    <div class="skill-card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.FP4_MQ6etxwFYCR3OShN9wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+        <span>Canva</span>
+    </div>
+
+    <div class="skill-card">
+        <img src="https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg" alt="Photoshop">
+        <span>Adobe Photoshop</span>
+    </div>
+</div>
+</section>
+
+    <section id="gallery">
+    <h2 class="gallery-title">My Gallery</h2>
+    <div class="gallery-grid">
+        <div class="item">
+            <img src="poster ssc serius fix.png" alt="desain 1">
+            <p>desain 1</p>
+        </div>
+        <div class="item">
+            <img src="MATCHA COOKIES.png" alt="desain 2">
+            <p>desain 2</p>
+        </div>
+        <div class="item">
+            <img src="OPEN PO MINIMIX COOKIES yg aseli.png" alt="desain 3">
+            <p>desain 3</p>
+        </div>
+        <div class="item">
+            <img src="marhaban yaa ramadhan 2026.png" alt="desain 4">
+            <p>desain 4</p>
+        </div>
+        <div class="item">
+            <img src="logo ssc terbaru fix.png" alt="desain 5">
+            <p>desain 5</p>
+        </div>
+        <div class="item">
+            <img src="soft cookies.png" alt="desain 6">
+            <p>desain 6</p>
+        </div>
+    </div>
+</section>
+    </div>
+</div>
+    </section>
+    
+
+    <section id="education" class="bg-light">
+        <h2>My Education & Achievement</h2>
+        <p>List riwayat pendidikan dan pencapaian terbaikmu.</p>
+    </section>
+
+    <section id="contact">
+    <h2 class="contact-title">Contact Me</h2>
+    <div class="contact-container">
+        <a href="https://instagram.com/arsdipul_" class="contact-card instagram">
+            <img src="https://img.icons8.com/color/512/instagram-new.png" alt="Instagram">
+            <span>Instagram</span>
+        </a>
+        <a href="https://wa.me/085313620152" class="contact-card whatsapp">
+            <img src="https://img.icons8.com/color/512/whatsapp.png" alt="WhatsApp">
+            <span>WhatsApp</span>
+        </a>
+        <a href="arsdd045@gmail.com" class="contact-card email">
+            <img src="https://img.icons8.com/color/512/gmail-new.png" alt="Email">
+            <span>Email</span>
+        </a>
+    </div>
+</section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-youtube"></i> Youtube</a>
+            <a href="#"><i class="fab fa-tiktok"></i> Tiktok</a>
+            <a href="#"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+        <div class="footer-bottom">
+            <a href="#">Getting Started</a> | <a href="#">Policies</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+const sunIcon = document.getElementById('sun-icon');
+const moonIcon = document.getElementById('moon-icon');
+const currentTheme = localStorage.getItem('theme');
+
+// Cek jika user sebelumnya sudah memilih tema tertentu
+if (currentTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  sunIcon.style.display = 'none';
+  moonIcon.style.display = 'block';
+}
+
+toggleBtn.addEventListener('click', () => {
+  let theme = document.documentElement.getAttribute('data-theme');
+  
+  if (theme === 'dark') {
+    // Ubah ke Light Mode
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+    sunIcon.style.display = 'block';
+    moonIcon.style.display = 'none';
+  } else {
+    // Ubah ke Dark Mode
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+  }
+});
+    </script>
+    <div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+</body>
+</body>
+</html>

@@ -536,3 +536,8 @@ html, body, a, button, input, [role="button"] {
         margin: 10px auto;
     }
 }
+
+h1 {
+    font-size: 24px; /* Kecilin biar gak menuhin layar HP */
+    line-height: 1.2;
+}

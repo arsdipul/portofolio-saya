@@ -541,3 +541,32 @@ h1 {
     font-size: 24px; /* Kecilin biar gak menuhin layar HP */
     line-height: 1.2;
 }
+
+/* Mode Tempur buat HP */
+@media (max-width: 600px) {
+    * {
+        max-width: 100vw; /* Semua elemen gak boleh lebih lebar dari layar */
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden; /* Biar gak bisa digeser ke kanan-kiri (goyang) */
+    }
+
+    .container, .hero, .gallery { 
+        padding: 10px;
+        display: flex;
+        flex-direction: column; /* Susun ke bawah, bukan ke samping */
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.8rem !important; /* Kecilin judul biar gak numpuk */
+        text-align: center;
+    }
+
+    img {
+        width: 100% !important; /* Gambar otomatis ngepas layar */
+        height: auto;
+    }
+}

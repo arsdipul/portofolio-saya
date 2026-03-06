@@ -68,3 +68,21 @@ window.addEventListener('load', () => {
         loader.classList.add('fade-out');
     }, 1000); // Angka 1000 = loading muncul selama 1 detik
 });
+
+/*my education */
+window.addEventListener('scroll', () => {
+    const timeline = document.querySelector('.timeline');
+    const dot = document.querySelector('.timeline-dot-progress');
+    if (!timeline || !dot) return;
+
+    const rect = timeline.getBoundingClientRect();
+    const viewHeight = window.innerHeight;
+
+    // Hitung posisi titik putih di dalam jalur
+    let progress = (viewHeight / 2 - rect.top) / rect.height;
+    
+    // Kunci progress antara 0% (awal) dan 100% (akhir timeline)
+    progress = Math.max(0, Math.min(1, progress));
+
+    dot.style.top = `${progress * 100}%`;
+});

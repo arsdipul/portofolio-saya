@@ -641,4 +641,44 @@ h1 {
     border-radius: 50%;
     box-shadow: 0 0 10px #FF5722;
 }
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+/* Aturan biar semua logo skill seragam */
+.skill-item img {
+    width: 40px; /* Sesuaikan sama ukuran logo Affinity/PS kamu */
+    height: 40px;
+    object-fit: contain; /* Biar logo gak gepeng kalau ditarik */
+    margin-right: 15px; /* Kasih jarak ke teks di kanannya */
+}
 
+/* Pastikan wadahnya (box abu-abu) ukurannya tetap sama */
+.skill-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #f0f0f0; /* Atau warna background yang kamu pake */
+    border-radius: 12px;
+    height: 60px; /* Kunci tinggi box-nya biar gak ikutan bengkak */
+}
+/* Efek saat kursor mendekat (Hover) */
+.skill-item {
+    transition: all 0.3s ease; /* Biar gerakannya halus, nggak patah-patah */
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px) scale(1.05); /* Naik dikit dan membesar 5% */
+    background: #ffffff; /* Background jadi putih bersih */
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2); /* Kasih bayangan biru tipis */
+    border-color: #00d2ff; /* Garis pinggir berubah jadi biru jagoan kamu */
+}
+
+/* Biar gambarnya juga ikut bereaksi */
+.skill-item:hover img {
+    filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.5)); /* Ikonnya ikutan nge-glow */
+    transform: rotate(5deg); /* Miring dikit biar dinamis */
+}
